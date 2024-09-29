@@ -4,6 +4,7 @@ This project can control FT300-sensor to get data in ur5 with python.
 本项目在ft300python的基础上修改，你可以前往该网站下载源代码：https://github.com/hygradme/ft300python
 
 也可以去robotiq官网下载可视化界面和C++代码：https://robotiq.com/products/ft-300-force-torque-sensor?ref=nav_product_new_button
+![Alt text](618345d618623c8737a509f5308e7fa8_.png)
 
 但是这些项目都不够完善，ft300python和官网的可视化界面可以查看数据流但是无法保存数据，官网C++代码可以保存数据但是不能对数据清零，因此我在ft300python的基础上增加了部分内容。
 ## 下载
@@ -27,6 +28,8 @@ This project can control FT300-sensor to get data in ur5 with python.
 30hz数据采集函数库，用于测试。
 #### ft300_stream.py
 100hz数据流采集函数库，本项目主要采用ft300_stream数据流模式。
+#### ft300_stream_tcp.py
+通过TCP/IP连接获取100hz数据流的函数库。
 #### generate.py三个文件
 数据生成图像函数库。
 包括有：
@@ -58,6 +61,8 @@ This project can control FT300-sensor to get data in ur5 with python.
 存放运行的脚本。
 #### run_ft300_modbusrtu.py
 运行30hz数据采集，仅测试，不保存数据。
+#### run_ft300_stream_tcp.py
+通过TCP/IP连接获取100hz数据流并打印输出。
 #### run_ft300_stream.py
 1. 将获得的数据以时间作为文件名保存在output\TEST中，**需要修改文件保存地址**。
 ```
@@ -71,8 +76,8 @@ This project can control FT300-sensor to get data in ur5 with python.
 1. **修改文件保存地址**，获取 output 文件夹中最后一个文件的文件中的数据，即该文件中的最新数据，并自行选择需要绘制的图像。
 2. 根据generate.py选择需要的绘制图像函数的数字并输入。
 #### run_save.py
-1.  **修改文件保存地址**，输入output文件夹下子文件夹的目录，如TEST  
-``` 
+1.  **修改文件保存地址**，输入output文件夹下子文件夹的目录，如TEST
+```
     path = input("请输入文件夹路径：")
     # 修改文件夹目录
     mydirectory = r"(your directory)\ft300-sensor\output"

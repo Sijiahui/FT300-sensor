@@ -4,7 +4,7 @@ import time
 import keyboard
 
 def start_program():
-    port = "COM3"
+    port = "COM4"
     ft_stream = FT300Stream(port, timeout=1, zero_reset=True)
 
     last_time = time.perf_counter()

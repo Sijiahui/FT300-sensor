@@ -6,7 +6,7 @@ if __name__ == "__main__":
     # Port name would be different in other environment.
     # You can get some info of ft300 sensor with force torque values.
 
-    port = "COM3"
+    port = "COM4"
     ft_modbusrtu = FT300ModbusRTU(port, timeout=1, zero_reset=False)
 
     print("production year", ft_modbusrtu.get_production_year())
