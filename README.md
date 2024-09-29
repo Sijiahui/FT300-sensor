@@ -1,5 +1,5 @@
 # FT300-sensor
-This project can control FT300-sensor to get data in ur5 with python.
+This project can control FT300-sensor to get data in ur5 with python（both USB and TCP/IP）.
 ## 引言
 本项目在ft300python的基础上修改，你可以前往该网站下载源代码：https://github.com/hygradme/ft300python
 
@@ -8,7 +8,7 @@ This project can control FT300-sensor to get data in ur5 with python.
 
 但是这些项目都不够完善，ft300python和官网的可视化界面可以查看数据流但是无法保存数据，官网C++代码可以保存数据但是不能对数据清零，因此我在ft300python的基础上增加了部分内容。
 ## 下载
-直接下载code，目前所有项目都是通过usb进行rtu连接，后续会增加tcp/ip连接方式，
+现已支持tcp/ip连接方式，
 ## 依赖
 - pyserial
 - pymodbus
